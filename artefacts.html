@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Obitha's Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.png">
+    <script 
+        src="https://kit.fontawesome.com/8272a11b3d.js" 
+        crossorigin="anonymous">
+    </script>
+</head>
+
+<body class="dp0">
+    <!------------------------------------------------------------------------------->
+    <!--------------------------------Header----------------------------------------->
+    <!------------------------------------------------------------------------------->
+
+    <header class="">
+        <div id="logo" class="container-fluid">
+            <a href="index.html">
+                <img src="img/fullLogo.png" alt="logo of Obitha's Shop" id="logoimg" class="row mx-auto img-fluid">
+            </a>
+        </div>
+        <div id="calibrator" class="d-none" style=" height:64px;"></div>
+        <nav class="navbar navbar-expand-lg navbar-dark dp6">
+            <a class="navbar-brand invisible" href="index.html">
+                <h2 id="obitha">Obitha's Shop</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse pl-xl-5" id="navbarTogglerDemo02">
+                <hr class="d-lg-none">
+                <ul class="navbar-nav mx-auto mt-2 mt-lg-0 pl-xl-5">
+                    <li class="nav-item active mx-xl-5 mx-lg-3 ">
+                        <a class="nav-link" href="#">
+                            <img src="img/khomsa.png" width="32">
+                            Artefacts<span class="sr-only">(current)
+                            </span>
+                        </a>
+                        <hr class="d-lg-none">
+                    </li>
+                    <li class="nav-item mx-xl-5 mx-lg-3">
+                        <a class="nav-link" href="cauldron.html">
+                            <input id="prodCountStore" type="hidden" value=0>
+                            <img id="cauldronImg" src="img/cauldron_empty.png" width="32">
+                            Cauldron <span class="d-none" id="prodCountDisplay"></span>
+                        </a>
+                        <hr class="d-lg-none">
+                    </li>
+                    <li class="nav-item mx-xl-5 mx-lg-3">
+                        <a class="nav-link" href="contact.html">
+                            <img src="img/parchment.png" width="32">
+                            Summon Us
+                        </a>
+                        <hr class="d-lg-none">
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-2 w-50" type="search" placeholder="Cast a Spell">
+                    <button class="btn btn-outline-prime my-2 my-sm-0" type="submit">Cast</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <!------------------------------------------------------------------------------->
+    <!-----------------------------CategorySelector---------------------------------->
+    <!------------------------------------------------------------------------------->
+    <section class="container my-4">
+        <h1 class="text-center memp">Artefacts</h1>
+        <div class="container dp1 mt-4 rounded p-2 pt-lg-2 pb-lg-3 px-lg-4">
+            <p class="text-center memp">Chose your desired category</p>
+            <div class=" row">
+                <div class="col-12 col-lg-3 my-2 m-sm-0">
+                    <button class=" w-100  tablink btn btn-outline-prime"
+                        onclick="openTab(event,'Amulets')">Crystals, Amulets...</button>
+                </div>
+                <div class="col-12 col-lg-3 my-2 m-sm-0">
+                    <button class=" w-100  tablink btn btn-outline-prime"
+                        onclick="openTab(event,'Grimoires')">Grimoires, Boards...</button>
+                </div>
+                <div class="col-12 col-lg-3 my-2 m-sm-0">
+                    <button class=" w-100  tablink btn btn-outline-prime" onclick="openTab(event,'Potions')">Potions and
+                        ingredients</button>
+                </div>
+                <div class="col-12 col-lg-3 my-2 m-sm-0">
+                    <button class=" w-100  tablink btn btn-outline-prime" onclick="openTab(event,'Wands')">Wands,
+                        Brooms...</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!------------------------------------------------------------------------------->
+    <!-------------------------------ProductsDisplay--------------------------------->
+    <!------------------------------------------------------------------------------->
+    <section class="container categ mb-4" id="Amulets">
+        <div class="dp1  mx-auto rounded p-2 p-lg-4">
+            <h2>Crystals, Amulets and Enchanted tools</h2>
+            <div id="card_container" class="row">
+                <div class="col-12 col-lg-4 my-2">
+                    <div id="amulet_card_1" class="card  w-100 rounded">
+                        <img class="card-img-top m-2 border-prime" src="img/crystal_1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Crystal 1</h5>
+                            <p class="card-text memp">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="row">
+                                <div class="col-5 col-lg-6 col-xl-5 text-center">
+                                    <h2 class="hemp">
+                                        300dt
+                                    </h2>
+                                </div>
+                                <div class="col-7 col-lg-6 col-xl-7 text-center">
+                                    <button class=" addProduct_btn card-btn d-inline-flex justify-content-around align-items-center">
+                                        <span> Add</span>
+                                        <img src="img/cauldron_empty.png" width=32> 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 my-2">
+                    <div id="amulet_card_2" class="card w-100 rounded">
+                        <img class="card-img-top m-2 border-prime" src="img/Amulet_1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Amulet 1</h5>
+                            <p class="card-text memp">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="row">
+                                <div class="col-5 col-lg-6 col-xl-5 text-center">
+                                    <h2 class="hemp">
+                                        15dt
+                                    </h2>
+                                </div>
+                                <div class="col-7 col-lg-6 col-xl-7 text-center">
+                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
+                                        ><span> Add</span><img src="img/cauldron_empty.png"
+                                            width=32> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 my-2">
+                    <div id="amulet_card_3" class="card w-100 rounded">
+                        <img class="card-img-top m-2 border-prime" src="img/crystal_3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Crystal 2</h5>
+                            <p class="card-text memp">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="row">
+                                <div class="col-5 col-lg-6 col-xl-5 text-center">
+                                    <h2 class="hemp">
+                                        156dt
+                                    </h2>
+                                </div>
+                                <div class="col-7 col-lg-6 col-xl-7 text-center">
+                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
+                                        ><span> Add</span><img src="img/cauldron_empty.png"
+                                            width=32> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="container categ mb-4" id="Grimoires">
+        <div class="dp1 mx-auto  rounded p-2 p-lg-4">
+            <h2>Grimoires, Boards and Cards</h2>
+            <div id="card_container" class="row">
+                <div class="col-12 col-lg-4 my-2">
+                    <div id="Grimoire_card_1" class="card  w-100 rounded">
+                        <img class="card-img-top m-2 border-prime" src="img/Grimoire_1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Grimoire 1</h5>
+                            <p class="card-text memp">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="row">
+                                <div class="col-5 col-lg-6 col-xl-5 text-center">
+                                    <h2 class="hemp">
+                                        300dt
+                                    </h2>
+                                </div>
+                                <div class="col-7 col-lg-6 col-xl-7 text-center">
+                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
+                                        ><span> Add</span><img src="img/cauldron_empty.png"
+                                            width=32> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 my-2">
+                    <div id="Grimoire_card_2" class="card w-100 rounded">
+                        <img class="card-img-top m-2 border-prime" src="img/Tarot.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Tarot set</h5>
+                            <p class="card-text memp">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="row">
+                                <div class="col-5 col-lg-6 col-xl-5 text-center">
+                                    <h2 class="hemp">
+                                        300dt
+                                    </h2>
+                                </div>
+                                <div class="col-7 col-lg-6 col-xl-7 text-center">
+                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
+                                        ><span> Add</span><img src="img/cauldron_empty.png"
+                                            width=32> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 my-2">
+                    <div id="Grimoire_card_3" class="card w-100 rounded">
+                        <img class="card-img-top m-2 border-prime" src="img/Grimoire_2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text memp">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="row">
+                                <div class="col-5 col-lg-6 col-xl-5 text-center">
+                                    <h2 class="hemp">
+                                        300dt
+                                    </h2>
+                                </div>
+                                <div class="col-7 col-lg-6 col-xl-7 text-center">
+                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
+                                        ><span> Add</span><img src="img/cauldron_empty.png"
+                                            width=32> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 my-2">
+                    <div id="Grimoire_card_3" class="card w-100 rounded">
+                        <img class="card-img-top m-2 border-prime" src="img/ouija.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Ouija Board</h5>
+                            <p class="card-text memp">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="row">
+                                <div class="col-5 col-lg-6 col-xl-5 text-center">
+                                    <h2 class="hemp">
+                                        300dt
+                                    </h2>
+                                </div>
+                                <div class="col-7 col-lg-6 col-xl-7 text-center">
+                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
+                                        ><span> Add</span><img src="img/cauldron_empty.png"
+                                            width=32> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 my-2">
+                    <div id="Grimoire_card_3" class="card w-100 rounded">
+                        <img class="card-img-top m-2 border-prime" src="img/Grimoire_3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text memp">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="row">
+                                <div class="col-5 col-lg-6 col-xl-5 text-center">
+                                    <h2 class="hemp">
+                                        300dt
+                                    </h2>
+                                </div>
+                                <div class="col-7 col-lg-6 col-xl-7 text-center">
+                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
+                                        ><span> Add</span><img src="img/cauldron_empty.png"
+                                            width=32> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="container  categ mb-4" id="Potions">
+        <div class="dp1  mx-auto  rounded p-2 p-lg-4">
+            <h2>Potions and Ingredients</h2>
+            <div id="card_container" class="row">
+                <div class="col-12 col-lg-4 my-2">
+                    <div id="Potions_card_1" class="card  w-100 rounded">
+                        <img class="card-img-top m-2 border-prime" src="img/potion_1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Health Potion</h5>
+                            <p class="card-text memp">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="row">
+                                <div class="col-5 col-lg-6 col-xl-5 text-center">
+                                    <h2 class="hemp">
+                                        300dt
+                                    </h2>
+                                </div>
+                                <div class="col-7 col-lg-6 col-xl-7 text-center">
+                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
+                                        ><span> Add</span><img src="img/cauldron_empty.png"
+                                            width=32> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 my-2">
+                    <div id="Potions_card_2" class="card w-100 rounded">
+                        <img class="card-img-top m-2 border-prime" src="img/potion_2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Boiling Water</h5>
+                            <p class="card-text memp">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="row">
+                                <div class="col-5 col-lg-6 col-xl-5 text-center">
+                                    <h2 class="hemp">
+                                        300dt
+                                    </h2>
+                                </div>
+                                <div class="col-7 col-lg-6 col-xl-7 text-center">
+                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
+                                        ><span> Add</span><img src="img/cauldron_empty.png"
+                                            width=32> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 my-2">
+                    <div id="Potions_card_3" class="card w-100 rounded">
+                        <img class="card-img-top m-2 border-prime" src="img/potion_3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Felix Felicis</h5>
+                            <p class="card-text memp">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="row">
+                                <div class="col-5 col-lg-6 col-xl-5 text-center">
+                                    <h2 class="hemp">
+                                        300dt
+                                    </h2>
+                                </div>
+                                <div class="col-7 col-lg-6 col-xl-7 text-center">
+                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
+                                        ><span> Add</span><img src="img/cauldron_empty.png"
+                                            width=32> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="container  categ mb-4 " id="Wands">
+        <div class="dp1  mx-auto  rounded p-2 p-lg-4">
+            <h2>Wands, Brooms and other Oddities</h2>
+            <div id="card_container" class="row">
+                <div class="col-12 col-lg-4 my-2">
+                    <div id="Wands_card_1" class="card  w-100 rounded">
+                        <img class="card-img-top m-2 border-prime" src="img/staff_gandalf.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Staff of Gandalf</h5>
+                            <p class="card-text memp">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="row">
+                                <div class="col-5 col-lg-6 col-xl-5 text-center">
+                                    <h2 class="hemp">
+                                        300dt
+                                    </h2>
+                                </div>
+                                <div class="col-7 col-lg-6 col-xl-7 text-center">
+                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
+                                        ><span> Add</span><img src="img/cauldron_empty.png"
+                                            width=32> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 my-2">
+                    <div id="Wands_card_2" class="card w-100 rounded">
+                        <img class="card-img-top m-2 border-prime" src="img/Broom.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Nimbus 2000</h5>
+                            <p class="card-text memp">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <div class="row">
+                                <div class="col-5 col-lg-6 col-xl-5 text-center">
+                                    <h2 class="hemp">
+                                        300dt
+                                    </h2>
+                                </div>
+                                <div class="col-7 col-lg-6 col-xl-7 text-center">
+                                    <button class="addProduct_btn card-btn d-inline-flex justify-content-around align-items-center"
+                                        ><span> Add</span><img src="img/cauldron_empty.png"
+                                            width=32> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!------------------------------------------------------------------------------->
+    <!-----------------------------------Footer-------------------------------------->
+    <!------------------------------------------------------------------------------->
+    <footer class="container-fluid" style="background-color: black;">
+        <div clas="row">
+            <p class="col mx-auto my-0 p-0 text-center memp">
+                © - Chedi Feki for Obitha™ -- 2021
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/cartManager.js"></script>
+    <script src="js/headerScroll.js"></script>
+    <script src="js/tabs.js"></script>
+</body>
+
+</html>
