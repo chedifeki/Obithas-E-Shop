@@ -8,27 +8,82 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    
+    
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+        <script>
+            $(window).on('load',function(){
+                $("#OnLoadModal").modal('show');
+            });
+        </script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png">
-    <script 
-        src="https://kit.fontawesome.com/8272a11b3d.js" 
-        crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8272a11b3d.js" crossorigin="anonymous">
     </script>
+    
 </head>
 
 <body class="dp0">
+    <!------------------------------------------------------------------------------->
+    <!---------------------------------Modal----------------------------------------->
+    <!------------------------------------------------------------------------------->
+    
+    <div class="modal fade " id="OnLoadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+          <div class="modal-content dp24">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Welcome! and some Warnings</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h3>Welcome Visitor!</h3><br>
+              This website is a study of Dark Themed E-shops<br>
+              It is done by Chedi Feki for a Web Developement Course<br>
+              <hr>
+              Concepts applied: <br>
+              <ul>
+                  <li>HTML5 document structure</li>
+                  <li>CSS3 and Bootstrap integration for responsiveness</li>
+                  <li>vanilla JavaScript and basic DOM manipulations</li>
+              </ul>
+              <hr>
+              While the above mentioned concepts are applied seriously, the creator of this website
+              saw an opportunity in giving it a... <br> Fantasy twist!<br>
+              The site revolves around the Obitha character, a fearsome persona from the Tunisian Folklore and explores the possibility of her owning an E-commerce.
+              <br>All the content and Imagery of this site follows that theme and is therefore, just a big joke. 
+              <hr>
+              I, Chedi Feki, hereby affirm that I in no way endorse or encourage or promote the use of Magic, Child Mutilations or any abusive behaviors those characters are known for
+              <br>This is just fiction, please take it with a light heart.
+              <hr>
+              <h4>This is still a Work in Progress!</h4>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-prime" data-dismiss="modal">Acknowledged</button>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
     <!------------------------------------------------------------------------------->
     <!--------------------------------Header----------------------------------------->
     <!------------------------------------------------------------------------------->
@@ -148,8 +203,8 @@
     <!-------------------------------Section----------------------------------------->
     <!------------------------------------------------------------------------------->
     <section class="container">
-        <div class="dp1 rounded p-2 p-lg-4">
-            <h2 class="mb-4">About Us</h2>
+        <div class="dp1 rounded mb-4 p-2 p-lg-4">
+            <h2 class="mb-4">Who are We</h2>
             <div class="">
                 <div class="iframe-container ml-lg-4 my-4 mb-lg-0 mt-lg-2 embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" width="560" height="315"
@@ -158,96 +213,68 @@
                         allowfullscreen></iframe>
                 </div>
                 <p class="hemp text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis neque quis lacinia
-                    condimentum.
-                    Vivamus convallis, dui sed vestibulum hendrerit, libero est dictum dui, eu posuere justo purus ut
-                    ligula. Aenean
-                    non ex dignissim risus faucibus venenatis sed ultrices mauris. Nulla ut nisl ac velit sollicitudin
-                    condimentum.
-                    Nullam ornare arcu ut efficitur ultrices. Donec iaculis ante mauris, eu venenatis nulla malesuada
-                    quis.
-                    Duis
-                    luctus diam eget orci gravida venenatis. Maecenas metus orci, molestie non pretium nec, pulvinar sed
-                    nisl.
-                    Aliquam erat volutpat. In maximus a elit eu vehicula. Ut faucibus varius purus, ac porttitor massa.
-                    Proin sit
-                    amet iaculis elit.
+                    After a long career in Kidnapping Children, human and organs trafficking and other horrors,<b> Madam
+                        Obitha</b> decided it was time for a change of Pace.
+                </p>
+                <p class="hemp text-justify">
+                    With the assistance of her large network of tortured souls and repungent creatures, she put op
+                    together a successful international commerce providing the finest tools <u>every sorcerer and witch
+                        needs</u>.</p>
+                <p class="hemp text-justify">
+                    Starting as a specialized local vendor of human based delicacies, the commerce soon grew to englobe
+                    <b>talismans</b>, <b>potions</b>, and <b>magical artefacts</b> from all around this globe... and
+                    beyond!
+                </p>
+                <br>
+                <br>
+                <h2 class="mb-4">Our Mission.</h2>
+                <p class="hemp text-justify">
+                <span class="navbar-brand">Obitha's Shop™</span> is slowly becoming the <b>Amazon</b> of the Magical world with its
+                dedication to bringing
+                the <b><u>finest ingredients</u></b>, the <b><u>rarest Grimoires</u></b> and <b><u>Olivander's best wands</u></b> to its Clients.
+                </p>
+                <p class="hemp text-justify">
+                    We believe that a happy witch is a <b>Powerful Witch</b>, and after centuries of being <u>mistreated</u> and
+                    having a hard time gathering the knowledge and tools, sometimes at the detriment of our lives, We
+                    aim at providing these tools with a never-before witnessed ease, and to a bigger audience as well!
+                </p>
+                <p class="hemp text-justify">
+                    We will be enlarging our catalogue as the time goes by to satisfy the needs of all forsaken
+                    creatures. <b>Trolls</b>, <b>Ghouls</b>, and even <b>Bou-Saadia</b>! Brace yourselves for the winter is coming and soon you
+                    will have all your necessties to wreck havok in the human world! 
+                </p>
+                <p class="hemp text-justify">
+                    If you would like to recieve update about our most recent additions, concoctions and additions as
+                    well as a selection of our most popular products directly to your pigeon nest, or you mailbox for the
+                    modern witches and wizards outthere, you can <b>subscribe to our news-Letter</b> via the form below:
+                </p>
+                <div class="form-inline my-4">
+                    <form class="w-100">
+                        <fieldset class="dp4 w-100 text-center p-4 rounded">
+                            <legend>Subscribe to our news-Letter</legend>
 
-                    Sed vehicula est eu tincidunt lacinia. Donec vel sagittis purus, ac auctor arcu. Nulla vel dictum
-                    erat.
-                    Integer
-                    auctor placerat eros in hendrerit. Curabitur eget erat efficitur, commodo libero in, dapibus justo.
-                    Nullam
-                    gravida lacus eget magna luctus ultricies. Nullam mollis venenatis dui ac semper. Donec dictum non
-                    risus
-                    at
-                    pretium. Pellentesque sit amet aliquet lorem. Praesent pellentesque rutrum risus ac dignissim. Fusce
-                    ex
-                    tortor,
-                    bibendum a orci interdum, fringilla egestas tortor. Nulla pulvinar diam id nunc tempus, vitae rutrum
-                    massa
-                    faucibus. Integer condimentum, augue sit amet bibendum tempus, ligula neque mattis sapien, id
-                    vehicula
-                    dolor
-                    elit quis augue. In cursus ultrices porta. Nam hendrerit velit lacus, ac iaculis lectus lobortis a.
-                    Ut
-                    suscipit
-                    nulla ligula, finibus accumsan diam congue id.
-                    Nam mollis posuere lacinia. Aliquam hendrerit sagittis elit sed maximus. Cras consequat eget orci
-                    mollis
-                    vulputate. Nullam metus diam, aliquet ut feugiat mollis, dapibus et augue. Praesent a urna et nunc
-                    viverra
-                    varius. Nunc lobortis risus quis suscipit consequat. Quisque pharetra consequat massa et laoreet.
-                    Pellentesque
-                    congue euismod felis eget ultrices. Donec at justo tempus, eleifend mi eget, volutpat nulla. Integer
-                    tincidunt
-                    tincidunt purus ac egestas. Morbi iaculis leo a ipsum malesuada, quis vulputate dui dignissim. Donec
-                    mattis urna
-                    ac nibh feugiat, quis suscipit odio porta. Quisque feugiat elit magna, vel interdum ex vehicula
-                    vitae.
-                    Integer
-                    nisi lacus, facilisis at egestas non, tempus et lacus.
+                            <input class="form-control mr-2 w-50" type="email" placeholder="cast your Adress here">
+                            <button class="btn btn-outline-prime my-2 my-sm-0" type="submit">Cast</button>
+
+                            <p class="disabled">
+                                *due to GRDP restrictions we are currently unable to serve our dear clients in europe,
+                                we will fix
+                                this as fast as possible. <br>We thank you for you understanding!
+                            </p>
+                        </fieldset>
+                    </form>
+                </div>
+                <p class="text-center hemp">
+                    From <b>Madam Obitha</b>,<br>
+                    And her Associates<br>
+                    Stay Bewitched!<br>
+                    <b>Excelsior!</b>
                 </p>
 
-
+                </p>
             </div>
-
-
-
-
-
         </div>
-        <br>
-        <br>
-        <div class="dp2 rounded">dp2</div>
-        <br>
-        <br>
-        <div class="dp3 rounded">dp3</div>
-        <br>
-        <br>
-        <div class="dp4 rounded">dp4</div>
-        <br>
-        <br>
-        <div class="dp6 rounded">dp6</div>
-        <br>
-        <br>
-        <div class="dp8 rounded">dp8</div>
-        <br>
-        <br>
-        <div class="dp12 rounded">dp12</div>
-        <br>
-        <br>
-        <div class="dp16 rounded">dp16</div>
-        <br>
-        <br>
-        <div class="dp24 rounded">dp24</div>
-        <br>
-        <br>
-
-
     </section>
-
-
 
     <!------------------------------------------------------------------------------->
     <!-----------------------------------Footer-------------------------------------->
@@ -260,7 +287,7 @@
             </p>
         </div>
     </footer>
-
+    
     <script src="js/headerScroll.js"></script>
 </body>
 

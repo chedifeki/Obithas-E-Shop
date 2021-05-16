@@ -11,6 +11,7 @@ var setupListeners = function () {
     if (insertProduct_btn != null) {
         insertProduct_btn.addEventListener('click', insertProduct);
         insertProduct_btn.addEventListener('click',addProduct);
+        
     
     }
 
@@ -84,6 +85,7 @@ var insertProduct =function(){
     let prod  = prodSelector.value;
     let price = parseFloat(priceInput.value);
     let qty   = parseInt(qtyInput.value);
+        
     let subtotal = price*qty;
     let del_btn = "<button class=\"invisible-btn deleteProduct_btn\" onclick=\"deleteProduct(this)\"><i class=\"far fa-trash-alt\"></i></button>"
     let data = [prod, qty,price,subtotal, del_btn];
@@ -125,6 +127,9 @@ var insertProduct =function(){
      prodSelector.selectedIndex=0;
      priceInput.value="";
      qtyInput.value="";
+
+    // disable button 
+    insertProduct_btn.disabled=true;
 
 }
 
@@ -169,4 +174,31 @@ var checkout= function(){
     currentTotal = 0;
     totalStore.value=currentTotal;
     totalDisplay.classList.add("d-none");
+}
+
+var activateBtn = function(){
+    let prod = document.querySelector("#prodSelector").value;
+    let price=parseFloat(document.querySelector("#priceInput").value);
+    let qty=parseInt(document.querySelector("#qtyInput").value);
+    let insertProduct_btn = document.getElementById('insertProduct_btn');
+    
+    if (!(prod=="Select a Product" ||isNaN(price)|| isNaN(qty))){
+        if (price>0){
+            if(qty>0){
+                insertProduct_btn.disabled=false;
+            }
+            else{
+                alert("Please enter a valid Quantity!");
+                insertProduct_btn.disabled=true;
+            }
+        }
+        else{
+            alert("Please enter a valid price!");
+            insertProduct_btn.disabled=true;
+        }
+        
+    }
+    else{
+        insertProduct_btn.disabled=true;
+    }
 }
