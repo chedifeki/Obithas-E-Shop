@@ -170,6 +170,7 @@ section h2{
 }
 
 fieldset legend{
+    transform: translateY(20px);
  color:#cf6679;
 }
 
@@ -307,7 +308,9 @@ fieldset legend{
     outline:none;
 }
 
-
+textarea.form-control{
+    height:100px !important;
+}
 
 .far{
     color: rgba(207, 102, 121, .5);
